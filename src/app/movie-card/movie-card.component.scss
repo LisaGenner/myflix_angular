@@ -1,59 +1,79 @@
 movie-view {
-    position: relative;
-    display:grid; max-width: 100vw;
-    margin: .5rem auto;
-    padding: 2rem auto 5rem;
-    row-gap: 1.65em;
+  position: relative;
+  display: grid;
+  max-width: 100vw;
+  margin: 0.5rem auto;
+  padding: 2rem auto 5rem;
+  row-gap: 1.65em;
+}
+.movie-card {
+  margin-top: 0.35em;
+  width: 25vw;
+  height: 25vw;
+  justify-self: center;
+  justify-content: center;
+}
+
+.movie-page {
+  display: grid;
+  align-items: stretch;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 1fr;
+  max-width: 1280px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.mat-mdc-card-header {
+  padding: 0 0.5em 0.25em;
+}
+.mat-mdc-card-header {
+  color: hsl(0, 0%, 1%);
+}
+.movie-card > img {
+  height: 70%;
+  padding-right: 80px;
+}
+.mdc-card__actions {
+  display: block;
+}
+@media screen and (min-width: 250px) {
+  .movie-view {
+    grid-template-columns: 1fr;
   }
+
   .movie-card {
-    margin-top: .35em;
-    width: 25vw;
-    height: 25vw;
-    justify-self: center;
-    justify-content: center;
-   }
-  .mat-mdc-card-header {
-    padding: 0 .5em .25em;
+    width: 80vw;
   }
-  .mat-mdc-card-header {
-    color: hsl(0, 0%, 1%)
+}
+
+@media screen and (min-width: 500px) {
+  .movie-view {
+    grid-template-columns: 1fr 1fr;
   }
-  .movie-card > img {
-    height: 70%;
-    padding-right: 80px;
+
+  .movie-card {
+    width: 45vw;
   }
-  .mdc-card__actions {
-    display: block;
+}
+
+@media screen and (min-width: 750px) {
+  .movie-view {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  @media screen and (min-width: 250px) {
-    .movie-view {
-      grid-template-columns: 1fr;
-    }
-      
-    .movie-card { width: 80vw; }
+
+  .movie-card {
+    width: 30vw;
   }
-  
-  @media screen and (min-width: 500px) {
-    .movie-view {
-      grid-template-columns: 1fr 1fr;
-    }
-    
-    .movie-card { width: 45vw; }
+}
+
+@media screen and (min-width: 1000px) {
+  .movie-view {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
-  @media screen and (min-width: 750px) {
-    .movie-view {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  
-    .movie-card { width: 30vw; }
+
+  .movie-card {
+    width: 20vw;
   }
-  
-  @media screen and (min-width: 1000px) {
-    .movie-view {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    
-    .movie-card { width: 20vw; }
-  }
- 
+}
