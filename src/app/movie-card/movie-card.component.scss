@@ -32,10 +32,10 @@ movie-view {
 .mat-mdc-card-header {
   color: hsl(0, 0%, 1%);
 }
-// .movie-card > img {
-//   height: 70%;
-//   padding-right: 80px;
-// }
+.movie-card > img {
+  height: 70%;
+  padding-right: 80px;
+}
 .mdc-card__actions {
   display: block;
 }
