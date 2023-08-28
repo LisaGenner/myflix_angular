@@ -13,7 +13,7 @@
   grid-gap: 45px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-auto-rows: 1fr;
-  max-width: 1000px;
+  width: 80%;
   margin: auto;
   padding: 40px 20px;
   // margin-top: 0.35em;
@@ -21,6 +21,15 @@
   // height: 25vw;
   // justify-self: center;
   // justify-content: center;
+}
+
+.movie-card-image {
+  height: 462px;
+}
+
+.movie-details,
+.movie-subtitle {
+  font-size: 18px !important;
 }
 
 // .movie-card {

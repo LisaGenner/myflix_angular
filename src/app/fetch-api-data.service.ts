@@ -123,7 +123,7 @@ deleteUser(): Observable<any> {
   );
 }
 
-// api call for favorite movie endpoint
+// api call for favorite movie endpoint issue 127-143
 addFavoriteMovie(movieId: string): Observable<any> {
     const userObj = localStorage.getItem('user');
     const userJson = JSON.parse(userObj || "{}");
