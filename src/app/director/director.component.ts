@@ -16,5 +16,8 @@ export class DirectorComponent implements OnInit {
     }
   ) {}
 
+   /**
+   * This function calls specified methods automatically straight after Component was mounted
+   */ 
   ngOnInit(): void {}
 }
