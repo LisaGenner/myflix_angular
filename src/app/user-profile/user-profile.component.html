@@ -1,69 +1,74 @@
 <app-navigation></app-navigation>
 
 <div class="profile-container">
-    <div class="info-container ">
-        <div class="info">
-            <h1>Profile</h1>
-            <p>Username: {{user.Username}} </p>
-            <p>Email: {{user.Email}}</p>
-            <h2>Favorite movies</h2>
-            <div *ngIf="favoriteMovies.length === 0">
-                <p>your list is empty</p>
-            </div>
-        </div>
-        <mat-list>
-            <mat-list-item *ngFor="let movie of favoriteMovies">
-                <img matListItemAvatar src="{{movie.ImagePath}}" />
-                <span matListItemTitle>{{movie.Title}}</span>
-            </mat-list-item>
-        </mat-list>
+  <div class="info-container">
+    <div class="info">
+      <h1>Profile</h1>
+      <p>Username: {{ userData.Username }}</p>
+      <p>Email: {{ userData.Email }}</p>
+      <h2>Favorite movies</h2>
+      <div *ngIf="favoriteMovies.length === 0">
+        <p>your list is empty</p>
+      </div>
     </div>
-    <form class="userInfo">
-        <h2>Update profile</h2>
-        <br>
-        <mat-form-field >
-            <mat-label>Name</mat-label>
-            <input matInput [(ngModel)]="userData.Name" 
-            type="text" 
-            name="Name">
-        </mat-form-field>
+    <mat-list>
+      <mat-list-item *ngFor="let movie of favoriteMovies">
+        <img matListItemAvatar src="{{ movie.ImagePath }}" />
+        <span matListItemTitle>{{ movie.Title }}</span>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <form class="userInfo">
+    <h2>Update profile</h2>
+    <br />
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="userData.Name" type="text" name="Name" />
+    </mat-form-field>
 
-        <mat-form-field >
-            <mat-label>Username</mat-label>
-            <input matInput [(ngModel)]="userData.Username" 
-            type="text" 
-            name="Username">
-        </mat-form-field>
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input
+        matInput
+        [(ngModel)]="userData.Username"
+        type="text"
+        name="Username"
+      />
+    </mat-form-field>
 
-        <mat-form-field >
-            <mat-label>Password</mat-label>
-            <input matInput [(ngModel)]="userData.Password" 
-            type="password" 
-            placeholder="Password" 
-            name="Password"
-                required>
-        </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        [(ngModel)]="userData.Password"
+        type="password"
+        placeholder="Password"
+        name="Password"
+        required
+      />
+    </mat-form-field>
 
-        <mat-form-field >
-            <mat-label>Email</mat-label>
-            <input matInput [(ngModel)]="userData.Email" 
-            type="email" 
-            name="Email">
-        </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="userData.Email" type="email" name="Email" />
+    </mat-form-field>
 
-        <mat-form-field >
-            <mat-label>Birthday</mat-label>
-            <input matInput [(ngModel)]="userData.Birthday" 
-            type="date" 
-            name="Birthday">
-        </mat-form-field>
-    </form>
+    <mat-form-field>
+      <mat-label>Birthday</mat-label>
+      <input
+        matInput
+        [(ngModel)]="userData.Birthday"
+        type="date"
+        name="Birthday"
+      />
+    </mat-form-field>
+  </form>
   <mat-card-actions class="user-profile-actions">
-        <button mat-raised-button (click)="editUser()" color="primary" >
-            Update Profile
-        </button>
-        <button mat-button  (click)="deleteUser()" color="warn">
-            Delete account
-        </button>
-    </mat-card-actions>
+    <button mat-raised-button (click)="editUser()" color="primary">
+      Update Profile
+    </button>
+    <button mat-button (click)="deleteUser()" color="warn">
+      Delete account
+    </button>
+  </mat-card-actions>
 </div>

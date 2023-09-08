@@ -84,6 +84,7 @@ getUser(): Observable<any> {
   const userJson = JSON.parse(userObj || "{}");
   const username = userJson.Username;
   const token = localStorage.getItem('token');
+  console.log(userJson)
   return this.http.get<Response>(apiUrl + 'users/' + username, {
     headers: new HttpHeaders(
       {

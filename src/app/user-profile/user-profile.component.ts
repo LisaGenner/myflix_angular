@@ -30,7 +30,7 @@ export class UserProfileComponent implements OnInit {
  */
 getUser(): void {
   this.fetchApiData.getUser().subscribe((response: any) => {
-    console.log(this.user);
+    console.log(response);
     this.user = response;
     this.userData.Username = this.user.Username;
     this.userData.Email = this.user.Email;
